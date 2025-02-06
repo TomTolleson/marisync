@@ -1,0 +1,38 @@
+# Scala/SBT
+target/
+.bsp/
+project/target/
+project/project/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+build/
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Databricks
+.databricks/
+
+# Misc
+.DS_Store
+*.log
+
+# Virtual Environment
+marisync-env/
+venv/
+.env/
+
+# Sensitive Information
+.env
+.databrickscfg
+marisync.databrickscfg
+secrets/
+*.pem

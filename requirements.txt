@@ -1,0 +1,6 @@
+databricks-cli
+mlflow
+delta-spark
+pandas
+scikit-learn
+python-dotenv 
