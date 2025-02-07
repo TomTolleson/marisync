@@ -1,0 +1,35 @@
+{
+  "name": "Environmental Pipeline",
+  "email_notifications": {
+    "on_success": ["your-email@example.com"],
+    "on_failure": ["your-email@example.com"]
+  },
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "process_sensors",
+      "notebook_task": {
+        "notebook_path": "/Repos/tomtolleson@gmail.com/marisync-project/src/main/scala/pipeline/SensorStreamProcessor",
+        "base_parameters": {
+          "environment": "production"
+        }
+      },
+      "existing_cluster_id": "0206-220350-kvefctm7"
+    },
+    {
+      "task_key": "train_model",
+      "notebook_task": {
+        "notebook_path": "/Repos/tomtolleson@gmail.com/marisync-project/src/main/python/environmental_ml",
+        "base_parameters": {
+          "environment": "production"
+        }
+      },
+      "existing_cluster_id": "0206-220350-kvefctm7",
+      "depends_on": [
+        {
+          "task_key": "process_sensors"
+        }
+      ]
+    }
+  ]
+} 

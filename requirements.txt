@@ -1,6 +1,11 @@
-databricks-cli
+databricks-cli==0.18.0
 mlflow
 delta-spark
 pandas
 scikit-learn
-python-dotenv 
+python-dotenv
+kafka-python==2.0.2
+python-dateutil
+requests
+netCDF4
+xarray
